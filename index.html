@@ -1,0 +1,467 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUFF CLUB | Vapeadores Premium • Pamplona & Bucaramanga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="age-locked">
+
+  <!-- AGE VERIFICATION MODAL (+18) -->
+  <div id="ageModal" class="age-modal-overlay">
+    <div class="age-modal-card">
+      <div class="age-glow"></div>
+      <div class="age-icon-badge">
+        <i data-lucide="shield-alert"></i>
+      </div>
+      <div class="brand-logo-text small">
+        <span class="logo-puff">PUFF</span><span class="logo-club">CLUB</span>
+      </div>
+      <h2>CONTROL DE EDAD REQUERIDO</h2>
+      <p class="age-desc">Debes tener al menos <strong>18 años de edad</strong> para acceder a este sitio web y adquirir productos de vapeo.</p>
+      
+      <div class="age-actions">
+        <button id="btnAgeYes" class="btn-primary glow-btn">
+          <i data-lucide="check-circle-2"></i> SOY MAYOR DE 18 AÑOS
+        </button>
+        <button id="btnAgeNo" class="btn-outline">
+          <i data-lucide="x-circle"></i> Soy menor de 18
+        </button>
+      </div>
+
+      <div class="age-warning">
+        <i data-lucide="alert-triangle"></i>
+        <span>Venta prohibida a menores de edad. Vapear puede ser perjudicial para la salud.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP TICKER / PROMO BAR -->
+  <div class="top-ticker">
+    <div class="ticker-track">
+      <span>📍 ENTREGAS EXPRESS EN PAMPLONA (NORTE DE SANTANDER) Y BUCARAMANGA</span>
+      <span>🚀 ENVÍOS A TODO EL PAÍS CON PAGO CONTRAENTREGA</span>
+      <span>⚡ PRODUCTOS 100% ORIGINALES CON CÓDIGO QR</span>
+      <span>🔥 NUEVAS REFERENCIAS HASTA 60.000 PUFFS DISPONIBLES</span>
+      <span>💬 ASESORÍA Y PEDIDOS DIRECTOS POR WHATSAPP</span>
+      <span>📍 ENTREGAS EXPRESS EN PAMPLONA (NORTE DE SANTANDER) Y BUCARAMANGA</span>
+      <span>🚀 ENVÍOS A TODO EL PAÍS CON PAGO CONTRAENTREGA</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <div class="logo-glow-ring"></div>
+        <span class="logo-puff">PUFF</span>
+        <span class="logo-club">CLUB</span>
+        <span class="logo-tag">PAMPLONA / BGA</span>
+      </a>
+
+      <div class="nav-search-box">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Buscar por referencia, marca o puffs (ej: Archer, Spaceman, Clase, 30.000)...">
+        <button id="clearSearch" class="clear-search-btn" title="Limpiar"><i data-lucide="x"></i></button>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#catalogo" class="nav-link">Catálogo</a>
+        <a href="#destacados" class="nav-link">Videos HD</a>
+        <a href="#beneficios" class="nav-link">Garantía & Envíos</a>
+        <a href="#faq" class="nav-link">Preguntas</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/573000000000?text=Hola%20Puff%20Club,%20quiero%20hacer%20un%20pedido%20en%20Pamplona%20/%20Bucaramanga" target="_blank" class="nav-wa-direct" title="Hablar con un asesor">
+          <i data-lucide="message-circle"></i>
+          <span>Asesoría</span>
+        </a>
+        <button id="cartBtn" class="cart-trigger-btn" aria-label="Ver carrito">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Abrir menú">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#catalogo" class="mob-link">Catálogo de Vapes</a>
+      <a href="#destacados" class="mob-link">Modelos en Video</a>
+      <a href="#beneficios" class="mob-link">Garantía & Envíos</a>
+      <a href="#faq" class="mob-link">Preguntas Frecuentes</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-bg-glow"></div>
+
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            PAMPLONA (NTE. DE SANTANDER) & BUCARAMANGA
+          </div>
+          <h1 class="hero-title">
+            VAPEA AL SIGUIENTE <span class="text-glow-blue">NIVEL</span> CON PUFF CLUB
+          </h1>
+          <p class="hero-subtitle">
+            Tu tienda oficial de vapeadores prémium. Modelos de hasta <strong>60.000 Puffs</strong>, tecnología Ice Control, pantallas táctiles HD y despachos el mismo día en <strong>Pamplona, Norte de Santander y Bucaramanga</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#catalogo" class="btn-primary glow-btn large">
+              <i data-lucide="flame"></i> EXPLORAR CATÁLOGO
+            </a>
+            <a href="#destacados" class="btn-secondary large">
+              <i data-lucide="play-circle"></i> VER VIDEOS HD
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Originales con QR</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">+60.000</span>
+              <span class="stat-label">Puffs Máximos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">Express</span>
+              <span class="stat-label">Pamplona & BGA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO FEATURED VIDEO PREVIEW -->
+        <div class="hero-preview-card">
+          <div class="preview-glow-border">
+            <div class="preview-video-wrapper">
+              <video id="heroVideo" autoplay muted loop playsinline poster="assets/archer-60000.jpg">
+                <source src="assets/archer-video.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay-info">
+                <div class="video-top-badges">
+                  <span class="pill-badge blue"><i data-lucide="sparkles"></i> TOP VENTAS</span>
+                  <span class="pill-badge dark">60.000 PUFFS</span>
+                </div>
+                <h3>ARCHER 60K ICE CONTROL</h3>
+                <p>Dual Mesh Coil • Modos Suave, Normal y Boost • Pantalla Digital</p>
+                <div class="video-controls-row">
+                  <button id="heroSoundToggle" class="sound-toggle-btn">
+                    <i data-lucide="volume-x"></i> <span>Activar Audio</span>
+                  </button>
+                  <button class="btn-sm-glow" id="heroQuickAdd">
+                    <i data-lucide="shopping-bag"></i> Agregar $48.000
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO HIGHLIGHTS -->
+    <section class="banner-highlights">
+      <div class="highlight-card">
+        <div class="hl-icon"><i data-lucide="map-pin"></i></div>
+        <div>
+          <h4>Pamplona & Bucaramanga</h4>
+          <p>Domicilios rápidos directos en Pamplona (Norte de Santander) y Bucaramanga.</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="hl-icon"><i data-lucide="shield-check"></i></div>
+        <div>
+          <h4>Autenticidad 100%</h4>
+          <p>Códigos de verificación antifraude directos del fabricante.</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="hl-icon"><i data-lucide="sparkles"></i></div>
+        <div>
+          <h4>Tecnología Mesh Coil</h4>
+          <p>Sabor fiel y humo denso en cada calada de principio a fin.</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="hl-icon"><i data-lucide="truck"></i></div>
+        <div>
+          <h4>Envíos Nacionales</h4>
+          <p>Despachos a toda Colombia con transportadoras aliadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE SECTION -->
+    <section class="featured-videos-section" id="destacados">
+      <div class="section-header">
+        <div class="section-tag"><i data-lucide="video"></i> EXPERIENCIA AUDIOVISUAL</div>
+        <h2 class="section-title">REFERENCIAS EN <span class="text-glow-blue">ACCIÓN</span></h2>
+        <p class="section-desc">Observa el rendimiento, nubes de vapor, acabados y luces de cada modelo antes de ordenar.</p>
+      </div>
+
+      <div class="video-showcase-grid" id="videoShowcaseGrid">
+        <!-- Injected via JS -->
+      </div>
+    </section>
+
+    <!-- PRODUCTS CATALOG SECTION -->
+    <section class="catalog-section" id="catalogo">
+      <div class="section-header">
+        <div class="section-tag"><i data-lucide="grid"></i> CATÁLOGO DISPONIBLE</div>
+        <h2 class="section-title">TODAS LAS <span class="text-glow-blue">REFERENCIAS</span></h2>
+        <p class="section-desc">Selecciona tu modelo favorito, mira su video demostrativo y recíbelo hoy mismo.</p>
+      </div>
+
+      <!-- FILTER BUTTONS -->
+      <div class="filter-wrapper">
+        <div class="filter-pills" id="filterPills">
+          <button class="filter-btn active" data-filter="all">
+            <i data-lucide="layers"></i> Todos (<span id="countAll">0</span>)
+          </button>
+          <button class="filter-btn" data-filter="ultra">
+            <i data-lucide="zap"></i> Ultra Potencia (30K - 60K Puffs)
+          </button>
+          <button class="filter-btn" data-filter="pro">
+            <i data-lucide="gauge"></i> Gama Pro (15K - 25K Puffs)
+          </button>
+          <button class="filter-btn" data-filter="edicion">
+            <i data-lucide="crown"></i> Ediciones 24K & Clase
+          </button>
+          <button class="filter-btn" data-filter="compact">
+            <i data-lucide="feather"></i> Compactos (4K - 8K Puffs)
+          </button>
+          <button class="filter-btn" data-filter="baterias">
+            <i data-lucide="battery-charging"></i> Baterías & Repuestos
+          </button>
+        </div>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected via JS -->
+      </div>
+
+      <div class="no-results hidden" id="noResults">
+        <i data-lucide="search-x"></i>
+        <h3>No se encontraron productos</h3>
+        <p>Intenta con otra palabra clave o selecciona otra categoría.</p>
+        <button class="btn-secondary" id="btnResetFilters">Restablecer Filtros</button>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us-section" id="beneficios">
+      <div class="why-glow"></div>
+      <div class="why-container">
+        <div class="why-card">
+          <div class="why-badge">01</div>
+          <div class="why-icon"><i data-lucide="check-check"></i></div>
+          <h3>Garantía de Satisfacción</h3>
+          <p>Cada equipo es revisado y sellado de fábrica para asegurar la máxima frescura del líquido y batería al 100%.</p>
+        </div>
+
+        <div class="why-card active-card">
+          <div class="why-badge">02</div>
+          <div class="why-icon"><i data-lucide="flame"></i></div>
+          <h3>Sabores & Densidad Inigualable</h3>
+          <p>Tecnologías Mesh Coil duales y flujo de aire graduable para caladas suaves o nubes densas según tu gusto.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-badge">03</div>
+          <div class="why-icon"><i data-lucide="message-square-heart"></i></div>
+          <h3>Atención Rápida por WhatsApp</h3>
+          <p>Servicio directo en Pamplona y Bucaramanga para entregas rápidas y asesoría en tus compras.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="section-header">
+        <div class="section-tag"><i data-lucide="help-circle"></i> RESOLVEMOS TUS DUDAS</div>
+        <h2 class="section-title">PREGUNTAS <span class="text-glow-blue">FRECUENTES</span></h2>
+      </div>
+
+      <div class="faq-accordion">
+        <details class="faq-item">
+          <summary>
+            <span>¿Hacen entregas en Pamplona y Bucaramanga?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>¡Sí! Contamos con cobertura directa para despachos en <strong>Pamplona (Norte de Santander)</strong> y <strong>Bucaramanga</strong>, así como envíos a nivel nacional a través de transportadoras aliadas.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>¿Cómo realizo mi pedido y cuáles son los medios de pago?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>Agrega los vapeadores a tu carrito y haz clic en <strong>"FINALIZAR PEDIDO EN WHATSAPP"</strong>. Se redactará un mensaje con tu pedido y dirección para coordinar el pago (Nequi, Daviplata, Transferencia Bancolombia, Tarjeta de Crédito o Contraentrega).</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>¿Los vapeadores son 100% originales?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>¡Absolutamente! Todos los productos de Puff Club vienen en su empaque sellado con código QR y número de serie verificable en los sitios oficiales de cada fabricante.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>¿Cuánto demoran los envíos?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>Envíos en Pamplona y Bucaramanga: entregas el mismo día vía mensajería express. Envíos nacionales: 24 a 48 horas hábiles.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="brand-logo-text">
+          <span class="logo-puff">PUFF</span><span class="logo-club">CLUB</span>
+        </div>
+        <p class="footer-bio">
+          Tu club exclusivo de vapeadores de alto rendimiento. Envíos y entregas en <strong>Pamplona (Norte de Santander)</strong>, <strong>Bucaramanga</strong> y toda Colombia.
+        </p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i data-lucide="music-2"></i></a>
+          <a href="https://wa.me/573000000000" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#catalogo">Catálogo Completo</a></li>
+          <li><a href="#destacados">Demostraciones en Video</a></li>
+          <li><a href="#beneficios">Garantía y Envíos</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ubicación & Contacto</h4>
+        <ul>
+          <li><i data-lucide="map-pin"></i> <strong>Pamplona, Norte de Santander</strong></li>
+          <li><i data-lucide="map-pin"></i> <strong>Bucaramanga, Santander</strong></li>
+          <li><i data-lucide="phone"></i> WhatsApp: +57 (300) 000-0000</li>
+          <li><i data-lucide="clock"></i> Lun - Sáb: 9:00 AM - 10:00 PM</li>
+          <li><i data-lucide="shield"></i> Exclusivo para Mayores de 18 Años</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear">2026</span> PUFF CLUB • Pamplona (Norte de Santander) - Bucaramanga. Todos los derechos reservados.</p>
+      <p class="health-warning">ADVERTENCIA: Este producto contiene nicotina, una sustancia adictiva. Prohibida su venta a menores de 18 años.</p>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAIL & VIDEO MODAL -->
+  <div id="productModal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-body-grid" id="modalContent">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CART SLIDEOUT DRAWER -->
+  <div id="cartOverlay" class="cart-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-title-row">
+        <i data-lucide="shopping-bag"></i>
+        <h3>Tu Carrito de Compra</h3>
+      </div>
+      <button id="cartCloseBtn" class="cart-close-btn" aria-label="Cerrar carrito">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="cart-items-wrapper" id="cartItemsList">
+      <!-- Injected via JS -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span class="cart-total-price" id="cartSubtotal">$0 COP</span>
+      </div>
+      <div class="cart-summary-line free-shipping-tip">
+        <span><i data-lucide="truck"></i> Envío / Domicilio:</span>
+        <span class="text-glow-blue">Pamplona / Bucaramanga / Nacional</span>
+      </div>
+
+      <!-- Customer Checkout Form Fields -->
+      <div class="checkout-fields">
+        <label for="customerName">Nombre para entrega (Opcional):</label>
+        <input type="text" id="customerName" placeholder="Tu Nombre">
+
+        <label for="customerCity">Ciudad / Dirección (Pamplona / Bucaramanga):</label>
+        <input type="text" id="customerCity" placeholder="Ej: Pamplona, Bucaramanga, etc.">
+      </div>
+
+      <button id="whatsappCheckoutBtn" class="btn-whatsapp-checkout">
+        <i data-lucide="message-circle"></i>
+        <span>FINALIZAR PEDIDO EN WHATSAPP</span>
+      </button>
+
+      <button id="clearCartBtn" class="btn-clear-cart">
+        <i data-lucide="trash-2"></i> Vaciar Carrito
+      </button>
+    </div>
+  </aside>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/573000000000?text=Hola%20Puff%20Club,%20estoy%20viendo%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20en%20Pamplona%20/%20Bucaramanga" target="_blank" class="floating-wa" title="Escríbenos a WhatsApp">
+    <div class="floating-wa-pulse"></div>
+    <i data-lucide="message-circle"></i>
+    <span class="floating-wa-label">¿Pedir por WhatsApp?</span>
+  </a>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast-notification">
+    <i data-lucide="check-circle" id="toastIcon"></i>
+    <span id="toastMsg">Producto agregado</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
