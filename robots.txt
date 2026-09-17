@@ -1,5 +1,4 @@
 ﻿User-agent: *
 Allow: /
-Disallow:
 
-Sitemap: https://puffclub.co/sitemap.xml
+Sitemap: https://puffclub.pro/sitemap.xml
