@@ -633,25 +633,28 @@ function checkoutWhatsApp() {
   const city = customerCityInput ? customerCityInput.value.trim() : "Pamplona / Bucaramanga";
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
 
-  let message = `🔥 *¡HOLA PUFF CLUB! QUIERO REALIZAR UN PEDIDO* 🔥\n`;
-  message += `📍 *Zona:* Pamplona (Norte de Santander) / Bucaramanga\n`;
-  message += `═══════════════════════════\n`;
+  let message = `⚡ *PUFF CLUB • NUEVO PEDIDO OFICIAL* ⚡\n`;
+  message += `💨 _Vapeadores Premium • Entrega Express_\n`;
+  message += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
   
   if (name) {
     message += `👤 *Cliente:* ${name}\n`;
   }
-  message += `📍 *Ciudad/Dirección:* ${city}\n`;
-  message += `\n📦 *LISTA DE PRODUCTOS:*\n`;
-
+  message += `📍 *Dirección / Ciudad:* ${city}\n`;
+  message += `🏙️ *Zona:* Pamplona (Norte de Santander) / Bucaramanga\n\n`;
+  
+  message += `🛍️ *PRODUCTOS SELECCIONADOS:*\n`;
   cart.forEach((item, i) => {
-    message += `${i + 1}. *${item.name}* (x${item.qty})\n`;
-    message += `   • Sabor/Color: ${item.flavor}\n`;
-    message += `   • Subtotal: ${formatCOP(item.price * item.qty)}\n`;
+    message += `✨ *${i + 1}. ${item.name}* (Cant: ${item.qty})\n`;
+    message += `   🔹 *Sabor / Opción:* ${item.flavor}\n`;
+    message += `   💵 *Valor:* ${formatCOP(item.price * item.qty)}\n\n`;
   });
 
-  message += `\n💰 *VALOR TOTAL:* ${formatCOP(subtotal)}\n`;
-  message += `═══════════════════════════\n`;
-  message += `🚀 *¿Tienen disponibilidad para entrega inmediata?*`;
+  message += `━━━━━━━━━━━━━━━━━━━━━\n`;
+  message += `💰 *TOTAL A PAGAR:* *${formatCOP(subtotal)}*\n`;
+  message += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+  message += `🚀 *¿Tienen disponibilidad para despacho el día de hoy?*\n`;
+  message += `💳 _Por favor confírmenme los métodos de pago (Nequi, Daviplata, Contraentrega, Bancolombia)._`;
 
   const encodedMsg = encodeURIComponent(message);
   const waUrl = `https://wa.me/${STORE_CONFIG.phone}?text=${encodedMsg}`;
