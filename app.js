@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    PUFF CLUB - APPLICATION LOGIC & STORE ENGINE
    Ubicación: Pamplona (Norte de Santander) - Bucaramanga
    ========================================================================== */
@@ -293,7 +293,7 @@ const PRODUCTS = [
 
 // 2. CONFIGURATION
 const STORE_CONFIG = {
-  phone: "573000000000",
+  phone: "573143193485",
   currency: "COP",
   brandName: "PUFF CLUB",
   locations: "Pamplona (Norte de Santander) - Bucaramanga"
